@@ -1,0 +1,161 @@
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Нужно для псевдоэлементов */
+    width: 100%; /* Ограничиваем ширину на 100% */
+    max-width: 100vw; /* Максимальная ширина — 100% от ширины экрана */
+}
+
+/* Градиентные маски по краям */
+.content2:after {
+    content: '';
+    left: 80px; /* Расстояние от левого края .content до начала градиента */
+    height: 100%;
+    position: absolute;
+    width: 150px; /* Ширина градиента */
+    z-index: 100; /* Должно быть выше карточек, но ниже кнопок */
+    pointer-events: none;
+}
+.content2:before {
+    content: '';
+    pointer-events: none;
+    right: 80px; /* Расстояние от правого края .content до начала градиента */
+    height: 100%;
+    position: absolute;
+ /* Настройте цвет! */
+}
+
+/* Стили кнопок навигации */
+.btn {
+    min-width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background: #fff; /* Фон кнопок */
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    z-index: 200; /* Выше градиентов */
+    margin: 10px; /* Отступы кнопок */
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    transition: all .25s ease;
+}
+.btn:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+}
+.btn i {
+    font-size: 1.6rem; /* Размер иконки в кнопке */
+}
+
+/* Стили контейнера карточек */
+.con-cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Занимает доступную ширину между кнопками */
+    overflow-x: hidden; /* Горизонтальный скролл */
+    overflow-y: hidden; /* Скрываем вертикальный скролл */
+    padding-top: 100px; /* Отступ сверху (для выноса картинок) */
+    padding-left: 60px; /* Отступ слева */
+    padding-right: 50px; /* Отступ справа */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+        /* ... твои стили ... */
+        mask-image: linear-gradient(to right, 
+            transparent 0%, 
+            black 10%, 
+            black 90%, 
+            transparent 100%);
+        mask-mode: match-source;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+    
+        -webkit-mask-image: linear-gradient(to right, 
+            transparent 0%, 
+            black 10%, 
+            black 90%, 
+            transparent 100%);
+        -webkit-mask-mode: match-source;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+    
+}
+
+.con-cards::-webkit-scrollbar {
+    height: 8px; /* Высота горизонтального скроллбара */
+}
+.con-cards::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Цвет скроллбара */
+    border-radius: 10px;
+}
+
+/* Для Firefox */
+.con-cards {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Для IE/Edge */
+.con-cards {
+  -ms-overflow-style: none;
+}
+
+/* Стили карточки */
+.card2 {
+    width: 300px; /* Фиксированная ширина карточки */
+    min-width: 300px; /* Минимальная ширина */
+    height: auto; /* Высота авто */
+    /* background: #fff; Фон карточки */
+    border-radius: 30px;
+    position: relative;
+    z-index: 10; /* Ниже градиентов и кнопок */
+    margin: 25px; /* Отступы между карточками */
+    min-height: 356px;
+    transition: all .25s ease;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    cursor: pointer;
+}
+.card2:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+}
+.card2:hover .con-img {
+    transform: translate(0,-15px);
+}
+.card2 .con-img:hover img.blur {
+    opacity: 0.45;
+    transform: translate(-10px, 26px) scale(0.85);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Стили элементов внутри карточки */
+
+.card2 .con-text { /* Контейнер текста */
+    padding: 20px;
+}
+.card2 .con-img { /* Контейнер изображения */
+    width: calc(100% - 60px);
+    margin: 0px 30px;
+    margin-top: -90px; /* Вынос изображения наверх */
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease-out;
+}
+.card2 img { /* Основное изображение */
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    transition: all .35s ease-out;
+}
+.card2 img.blur { /* Размытое изображение для эффекта */
+    position: absolute;
+    filter: blur(15px);
+    z-index: -1; /* Позади основного изображения */
+    opacity: 0;
+    transform: translate(-10px, 10px) scale(.85);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    height: auto;
+    max-height: 300px;
+}

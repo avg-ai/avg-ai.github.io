@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="loader.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="background.css">
+
+    <link rel="stylesheet" href="portfolio.css">
+  <!--  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+-->
+<link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <script src="gsap.min.js"></script>
+<script src="ScrollTrigger.min.js"></script>
+</head>
+<body>
+      <!-- Лоадер -->
+<!-- Preloader -->
+<div id="preloader">
+ <div class="circle"></div>
+  </div>
+  
+    <div class="home-img">
+        <img src="linii.png" alt="image">
+    </div>
+
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+          <h1 class="main-title"> <span class="thin"></span></h1>
+
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav-logo">Avgust AI</a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#work" class="nav-link">Options</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home bd-grid" id="home">
+            <div class="home-data">
+                <h1 class="home-title">Hi, <br>I'm <span class="home-title-color">Avgust</span><br>Chatbot-developer</h1>
+                <a href="https://avgust.zapier.app/" class="button">Contact</a>
+            </div>
+
+            <div class="home-social">
+                <a href="https://www.linkedin.com/in/pavel-avgust/" class="home-social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.instagram.com/pavel.avg/" class="home-social-icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://github.com/AvgustAI/" class="home-social-icon"><i class='bx bxl-github' ></i></a>
+            </div>
+
+
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about-container bd-grid">
+                <div id="app" class="container">
+                    <card data-image="foto4.webp">
+                      <h1 slot="header">Pavel Avgust</h1>
+                      <p slot="content">Developer</p>
+                    </card>
+                </div>
+                <script src="vue.min.js"></script>
+                <script src="card.js"></script>
+                
+                <div>
+                    <h2 class="about-subtitle">I'm Pavel Avgust</h2>
+                    <p class="about-text">I specialize in AI-driven automation, chatbot development, and workflow optimization. By integrating smart AI solutions, I help businesses streamline operations and enhance customer interactions effortlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-container bd-grid">
+                <div>
+                    <h2 class="skills-subtitle">Professional Skills</h2>
+                    <p class="skills-text">I build AI-powered solutions that don’t just work—they solve real business challenges. From chatbot development and API integrations to AI-generated content and dynamic web applications (React, JavaScript), I create seamless, automated experiences that drive results.</p>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-css3 skills-icon' ></i>
+                            <span class="skills-name">Chatbot Development</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">95%</span>
+                        </div>
+
+                        <div class="skills-bar skills-html"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-html5 skills-icon' ></i>
+                            <span class="skills-name">Automation & Workflow Optimization</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">85%</span>
+                        </div>
+
+                        <div class="skills-bar skills-css"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxs-paint skills-icon' ></i>
+                            <span class="skills-name">AI & Content Generation (ChatGPT, Gemini, Copilot, Grok)</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">65%</span>
+                        </div>
+
+                        <div class="skills-bar skills-js"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-javascript skills-icon' ></i>
+                            <span class="skills-name">Web Development for AI-Powered Solutions (HTML, CSS, JavaScript, React)</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">85%</span>
+                        </div>
+
+                        <div class="skills-bar skills-ux"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="work.webp" alt="image" class="skills-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="work section" id="work">
+            <h2 class="section-title">Options</h2>
+
+            
+
+
+            
+            <div class="work-container">
+                <div class="content2">
+                    <button id="prev" class="btn">
+                        <i class='bx bxs-chevron-left'></i>
+                    </button>
+                    <div class="con-cards">
+                        <div class="card2">
+                            <div class="con-img">
+                                <img src="1.webp" alt="">
+                                <img class="blur" src="1.webp" alt="">
+                            </div>
+                            <div class="con-text">
+                                <h2>
+                                    Lead Capture and Processing Automation
+                                </h2>
+                                <p>
+                                    <!-- text... -->
+                                    Instantly capture leads from various sources (websites, social media, ads) and automatically send them to CRM or spreadsheets, launch email campaigns.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="con-img">
+                                <img src="2.webp" alt="">
+                                <img class="blur" src="2.webp" alt="">
+                            </div>
+                            <div class="con-text">
+                                <h2>
+                                    Sales Funnel Optimization and Acceleration
+                                </h2>
+                                <p>
+                                    Automate routine sales tasks: deal notifications, meeting scheduling, document creation, CRM data synchronization.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="con-img">
+                                <img src="3.webp" alt="">
+                                <img class="blur" src="3.webp" alt="">
+                            </div>
+                            <div class="con-text">
+                                <h2>
+                                    Effortless Marketing and SMM Automation
+                                </h2>
+                                <p>
+                                    Set up auto-posting to social media, email list syncing, campaign tracking, and AI-powered content creation to save marketers’ time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="con-img">
+                                <img src="4.webp" alt="">
+                                <img class="blur" src="4.webp" alt="">
+                            </div>
+                            <div class="con-text">
+                                <h2>
+                                    Improved Customer Support Quality
+                                </h2>
+                                <p>
+                                    Speed up customer response: auto-replies, request sorting, ticket creation in HelpDesk systems, feedback collection.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="con-img">
+                                <img src="5.webp" alt="">
+                                <img class="blur" src="5.webp" alt="">
+                            </div>
+                            <div class="con-text">
+                                <h2>
+                                    Smart AI Chatbot Development for Websites and Messengers
+                                </h2>
+                                <p>
+                                    Develop Zapier-based AI chatbots for lead qualification, answering FAQs, client onboarding, or internal tasks — available 24/7.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="con-img">
+                                <img src="6.webp" alt="">
+                                <img class="blur" src="6.webp" alt="">
+                            </div>
+                            <div class="con-text">
+                                <h2>
+                                    Custom Solutions and Dashboard development
+                                </h2>
+                                <p>
+                                    Create unique internal tools, reports, and dashboards using Zapier Tables & Interfaces to visualize data and automate complex processes.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="next" class="btn">
+                        <i class='bx bxs-chevron-right' ></i>
+                    </button>
+                </div>
+            <script src="portfolio.js"></script>
+        </section>
+
+        <section class="contact section" id="contact">
+<!-- FAQ SECTION -->
+<section class="faq-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+  
+    <!-- Скрытые SVG-символы -->
+    <div style="visibility: hidden; position: absolute; width: 0; height: 0;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol viewBox="0 0 24 24" id="expand-more">
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="close">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </symbol>
+      </svg>
+    </div>
+  
+<!-- FAQ Items -->
+<details class="faq-item" open>
+    <summary class="faq-summary" role="button" aria-expanded="true">
+      What business problems do you solve with automation and chatbots?
+      <svg class="faq-icon faq-icon-expand" width="24" height="24" role="presentation"><use xlink:href="#expand-more"/></svg>
+      <svg class="faq-icon faq-icon-close" width="24" height="24" role="presentation"><use xlink:href="#close"/></svg>
+    </summary>
+    <p class="faq-text">I help businesses eliminate routine tasks and improve communication. For example, I automate lead capture from websites or ads into your CRM, set up notifications for key events in Slack or Telegram, sync data between spreadsheets and tools, and build AI-powered chatbots that answer customer questions 24/7. The main goal is to save your time so you can grow your business.</p>
+  </details>
+  
+  <details class="faq-item">
+    <summary class="faq-summary" role="button" aria-expanded="false">
+      How does the project workflow look like?
+      <svg class="faq-icon faq-icon-expand" width="24" height="24" role="presentation"><use xlink:href="#expand-more"/></svg>
+      <svg class="faq-icon faq-icon-close" width="24" height="24" role="presentation"><use xlink:href="#close"/></svg>
+    </summary>
+    <p class="faq-text">It’s simple: we connect to discuss your task and goals. I suggest a solution and estimate the cost and timeline. Once agreed, I start building and testing the automation or chatbot. You get a ready-to-use solution and clear instructions. If needed, I request access to relevant services — all shared securely.</p>
+  </details>
+  
+  <details class="faq-item">
+    <summary class="faq-summary" role="button" aria-expanded="false">
+      How much does it cost?
+      <svg class="faq-icon faq-icon-expand" width="24" height="24" role="presentation"><use xlink:href="#expand-more"/></svg>
+      <svg class="faq-icon faq-icon-close" width="24" height="24" role="presentation"><use xlink:href="#close"/></svg>
+    </summary>
+    <p class="faq-text">The price depends on the complexity of the task — how many services are connected, how many steps are involved, and whether AI or custom logic is needed. Simple projects start at $100. More complex ones are priced individually. Just drop me a message and I’ll give you a precise estimate.</p>
+  </details>
+  
+  <details class="faq-item">
+    <summary class="faq-summary" role="button" aria-expanded="false">
+      Do I need paid accounts for Zapier or other tools? What about support?
+      <svg class="faq-icon faq-icon-expand" width="24" height="24" role="presentation"><use xlink:href="#expand-more"/></svg>
+      <svg class="faq-icon faq-icon-close" width="24" height="24" role="presentation"><use xlink:href="#close"/></svg>
+    </summary>
+    <p class="faq-text">Zapier has a free plan, but many business needs require a paid one — we’ll figure that out during planning. You’ll also need accounts on the services we’ll connect. After delivery, I offer 14 days of free support to fix any issues on my side. Expanding features or adding new tasks can be discussed separately.</p>
+  </details>
+  
+  <details class="faq-item">
+    <summary class="faq-summary" role="button" aria-expanded="false">
+      Do you work with platforms other than Zapier?
+      <svg class="faq-icon faq-icon-expand" width="24" height="24" role="presentation"><use xlink:href="#expand-more"/></svg>
+      <svg class="faq-icon faq-icon-close" width="24" height="24" role="presentation"><use xlink:href="#close"/></svg>
+    </summary>
+    <p class="faq-text">Yes, absolutely. I can build automation and chatbots on other platforms too — like n8n (even self-hosted), ManyChat, Dialogflow, Make, Pabbly Connect, Tidio, Albato, Activepieces, and more. We’ll choose the right tool depending on your needs and preferences.</p>
+  </details>
+  
+    </main>
+
+    <footer class="footer">
+<div class="scroll-effect-container" data-sync-scrollbar="true" data-animate="true" data-theme="dark">
+  <header class="scroll-effect-header">
+    <h1 class="scroll-effect-headline fluid">Ready to<br />start?</h1>
+  </header>
+  <main class="scroll-effect-main">
+    <section class="scroll-effect-section content fluid">
+      <h2 class="scroll-effect-title">
+        <span aria-hidden="true">you can </span>
+        <span class="scroll-effect-sr-only">you can ship things.</span>
+      </h2>
+      <ul class="scroll-effect-list" aria-hidden="true" style="--count: 22">
+        <li class="scroll-effect-list-item" style="--i: 0">design.</li>
+        <li class="scroll-effect-list-item" style="--i: 1">prototype.</li>
+        <li class="scroll-effect-list-item" style="--i: 2">solve.</li>
+        <li class="scroll-effect-list-item" style="--i: 3">build.</li>
+        <li class="scroll-effect-list-item" style="--i: 4">develop.</li>
+        <li class="scroll-effect-list-item" style="--i: 5">debug.</li>
+        <li class="scroll-effect-list-item" style="--i: 6">learn.</li>
+        <li class="scroll-effect-list-item" style="--i: 7">integrate.</li>
+        <li class="scroll-effect-list-item" style="--i: 8">ship.</li>
+        <li class="scroll-effect-list-item" style="--i: 9">prompt.</li>
+        <li class="scroll-effect-list-item" style="--i: 10">collaborate.</li>
+        <li class="scroll-effect-list-item" style="--i: 11">create.</li>
+        <li class="scroll-effect-list-item" style="--i: 12">inspire.</li>
+        <li class="scroll-effect-list-item" style="--i: 13">implement.</li>
+        <li class="scroll-effect-list-item" style="--i: 14">innovate.</li>
+        <li class="scroll-effect-list-item" style="--i: 15">test.</li>
+        <li class="scroll-effect-list-item" style="--i: 16">optimize.</li>
+        <li class="scroll-effect-list-item" style="--i: 17">streamline.</li>
+        <li class="scroll-effect-list-item" style="--i: 18">visualize.</li>
+        <li class="scroll-effect-list-item" style="--i: 19">transform.</li>
+        <li class="scroll-effect-list-item" style="--i: 20">scale.</li>
+        <li class="scroll-effect-list-item" style="--i: 21">do it.</li>
+      </ul>
+    </section>
+    <section class="scroll-effect-section">
+        <h2 class="scroll-effect-title fluid">With&nbsp;</h2>
+            <h2 class="scroll-effect-title fluid brand-gradient">Avgust AI</h2>
+    </section>
+  </main>
+  <footer class="scroll-effect-footer">
+
+    <div class="footer-social">
+        <a href="https://www.facebook.com/pl.avgust/" class="footer-icon"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.instagram.com/pavel.avg/" class="footer-icon"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://www.threads.net/@pavel.avg" class="footer-icon" aria-label="Threads">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="1.5rem" height="1.5rem" fill="currentColor">
+              <path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"/>
+            </svg>
+          </a>
+            </div>
+
+    <p>&#169; 2025 Copyright all rights reserved</p></footer>
+
+</div>
+
+          <script src="footer.js"></script>
+
+    </footer>
+
+
+
+
+    <script src="scrollreveal.js"></script>
+    <script src="script.js"></script>
+
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      
+      // Добавим плавное скрытие
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = '0';
+  
+      // Удалим элемент из DOM через 500 мс (после анимации)
+      setTimeout(() => {
+        if (preloader && preloader.parentNode) {
+          preloader.parentNode.removeChild(preloader);
+        }
+      }, 500);
+    });
+  </script>
+  
+<script src="EasePack.min.js"></script>
+<script src="rAF.js"></script>
+<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>  
+<script src="background.js"></script>
+
+</body>
+</html>
