@@ -1139,16 +1139,16 @@ div.tp-dfwv {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    overflow-x: auto; /* включаем горизонтальный скролл */
+    overflow-x: auto; /* Сохраняем горизонтальную прокрутку */
     overflow-y: hidden;
     padding-top: 100px;
     padding-left: 60px;
     padding-right: 50px;
     scroll-behavior: smooth;
-  
+
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-  
+
     mask-image: linear-gradient(to right, 
       transparent 0%, 
       black 10%, 
@@ -1157,7 +1157,7 @@ div.tp-dfwv {
     mask-mode: match-source;
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
-  
+
     -webkit-mask-image: linear-gradient(to right, 
       transparent 0%, 
       black 10%, 
@@ -1166,25 +1166,32 @@ div.tp-dfwv {
     -webkit-mask-mode: match-source;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
-  }
-
-.con-cards::-webkit-scrollbar {
-    height: 8px; /* Высота горизонтального скроллбара */
 }
-.con-cards::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2); /* Цвет скроллбара */
+
+/* Скрываем скроллбар по умолчанию */
+.con-cards::-webkit-scrollbar {
+    width: 0; /* Убираем ширину скроллбара для WebKit-браузеров */
+    height: 0;
+}
+
+.con-cards {
+    scrollbar-width: none; /* Убираем скроллбар в Firefox */
+    -ms-overflow-style: none; /* Убираем скроллбар в IE и Edge */
+}
+
+/* Делаем скроллбар исчезающим (появляется при наведении) */
+.con-cards:hover::-webkit-scrollbar {
+    width: 8px; /* Возвращаем ширину при наведении */
+    height: 8px;
+}
+
+.con-cards:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Цвет ползунка */
     border-radius: 10px;
 }
 
-/* Для Firefox */
-.con-cards {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-}
-
-/* Для IE/Edge */
-.con-cards {
-  -ms-overflow-style: none;
+.con-cards:hover::-webkit-scrollbar-track {
+    background: transparent; /* Прозрачный фон трека */
 }
 
 .card2 {
